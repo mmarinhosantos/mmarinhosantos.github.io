@@ -186,14 +186,14 @@ footer h3{color:#fff;font-size:15px;margin-bottom:12px}
 <nav>
   <div class="container nav-inner">
     <a href="#inicio"><img src="logo_plural.png" class="nav-logo" alt="Plural Inteligência"></a>
-    <a class="mobile-cta" href="https://wa.me/5521966637475?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Plural%20Intelig%C3%AAncia.%20Tenho%20um%20projeto%2Fdesafio%20e%20gostaria%20de%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar.">Falar no WhatsApp</a>
+    <a class="mobile-cta" data-whatsapp="message" href="#">Falar no WhatsApp</a>
     <div class="nav-links">
       <a href="#solucoes">Soluções</a>
       <a href="#publicos">Para quem</a>
       <a href="#metodo">Método</a>
       <a href="#projetos">Projetos</a>
       <a href="#sobre">Sobre</a>
-      <a class="nav-cta" href="https://wa.me/5521966637475?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Plural%20Intelig%C3%AAncia.%20Tenho%20um%20projeto%2Fdesafio%20e%20gostaria%20de%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar.">Falar com a Plural</a>
+      <a class="nav-cta" data-whatsapp="message" href="#">Falar com a Plural</a>
     </div>
   </div>
 </nav>
@@ -206,7 +206,7 @@ footer h3{color:#fff;font-size:15px;margin-bottom:12px}
       <h1>Transformamos ideias em projetos viáveis, financiáveis e executáveis.</h1>
       <p>Ajudamos organizações a transformar desafios em projetos, recursos e impacto — conectando estratégia, educação, inovação, tecnologia e gestão.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="https://wa.me/5521966637475?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Plural%20Intelig%C3%AAncia.%20Tenho%20um%20projeto%2Fdesafio%20e%20gostaria%20de%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar.">QUERO TIRAR MEU PROJETO DO PAPEL</a>
+        <a class="btn btn-primary" data-whatsapp="message" href="#">QUERO TIRAR MEU PROJETO DO PAPEL</a>
         <a class="btn btn-ghost" href="#projetos">Conhecer experiências</a>
       </div>
     </div>
@@ -376,7 +376,7 @@ footer h3{color:#fff;font-size:15px;margin-bottom:12px}
     <div class="cta-box">
       <h2>Tem um projeto, uma ideia ou um desafio que precisa sair do papel?</h2>
       <p>Conte o que você precisa transformar. A Plural ajuda a organizar o problema, estruturar o projeto e encontrar o caminho para viabilizá-lo.</p>
-      <a class="btn" href="https://wa.me/5521966637475?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Plural%20Intelig%C3%AAncia.%20Tenho%20um%20projeto%2Fdesafio%20e%20gostaria%20de%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar.">FALAR COM A PLURAL NO WHATSAPP</a>
+      <a class="btn" data-whatsapp="message" href="#">FALAR COM A PLURAL NO WHATSAPP</a>
     </div>
   </div>
 </section>
@@ -392,7 +392,7 @@ footer h3{color:#fff;font-size:15px;margin-bottom:12px}
         <h3>CONTATO</h3>
         <p><a href="mailto:plural.mams@gmail.com">plural.mams@gmail.com</a><br>
         <a href="tel:+5521966586042">21 96658-6042</a><br>
-        <a href="https://wa.me/5521966637475">WhatsApp: 21 96663-7475</a></p>
+        <a data-whatsapp="plain" href="#">WhatsApp: 21 96663-7475</a></p>
       </div>
       <div>
         <h3>REDES, SITE E ENDEREÇO</h3>
@@ -407,5 +407,22 @@ footer h3{color:#fff;font-size:15px;margin-bottom:12px}
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  const phone = '5521966637475';
+  const message = 'Olá, vim pelo site da Plural Inteligência. Tenho um projeto/desafio e gostaria de entender como vocês podem me ajudar.';
+  const encoded = encodeURIComponent(message);
+  const isMobile = /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+  const messageUrl = isMobile
+    ? `https://wa.me/${phone}?text=${encoded}`
+    : `https://web.whatsapp.com/send?phone=${phone}&text=${encoded}`;
+  const plainUrl = isMobile
+    ? `https://wa.me/${phone}`
+    : `https://web.whatsapp.com/send?phone=${phone}`;
+  document.querySelectorAll('[data-whatsapp="message"]').forEach(a => { a.href = messageUrl; a.target = '_blank'; a.rel = 'noopener'; });
+  document.querySelectorAll('[data-whatsapp="plain"]').forEach(a => { a.href = plainUrl; a.target = '_blank'; a.rel = 'noopener'; });
+})();
+</script>
 </body>
 </html>

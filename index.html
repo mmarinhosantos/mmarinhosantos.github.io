@@ -421,20 +421,9 @@ footer h3{color:#fff;font-size:15px;margin-bottom:12px}
     ? `https://wa.me/${phone}`
     : `https://web.whatsapp.com/send?phone=${phone}`;
 
-  let whatsappWindow = null;
-
   function openWhatsApp(event, url){
     event.preventDefault();
-    if (isMobile){
-      window.location.href = url;
-      return;
-    }
-    if (whatsappWindow && !whatsappWindow.closed){
-      try { whatsappWindow.location.href = url; } catch (e) {}
-      whatsappWindow.focus();
-    } else {
-      whatsappWindow = window.open(url, 'pluralWhatsApp');
-    }
+    window.location.href = url;
   }
 
   document.querySelectorAll('[data-whatsapp="message"]').forEach(a => {

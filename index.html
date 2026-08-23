@@ -421,23 +421,33 @@ footer h3{color:#fff;font-size:15px;margin-bottom:12px}
     ? `https://wa.me/${phone}`
     : `https://web.whatsapp.com/send?phone=${phone}`;
 
-  function openWhatsApp(event, url){
-    event.preventDefault();
-    window.location.href = url;
+  let whatsappOpened = false;
+
+  function configureWhatsApp(selector, url){
+    document.querySelectorAll(selector).forEach(a => {
+      a.href = url;
+      if (isMobile){
+        a.removeAttribute('target');
+        a.removeAttribute('rel');
+      } else {
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+      }
+      a.addEventListener('click', function(event){
+        if (whatsappOpened){
+          event.preventDefault();
+          return;
+        }
+        whatsappOpened = true;
+        document.querySelectorAll('[data-whatsapp]').forEach(btn => {
+          if (!btn.dataset.originalText) btn.dataset.originalText = btn.textContent;
+        });
+      });
+    });
   }
 
-  document.querySelectorAll('[data-whatsapp="message"]').forEach(a => {
-    a.href = messageUrl;
-    a.removeAttribute('target');
-    a.removeAttribute('rel');
-    a.addEventListener('click', e => openWhatsApp(e, messageUrl));
-  });
-  document.querySelectorAll('[data-whatsapp="plain"]').forEach(a => {
-    a.href = plainUrl;
-    a.removeAttribute('target');
-    a.removeAttribute('rel');
-    a.addEventListener('click', e => openWhatsApp(e, plainUrl));
-  });
+  configureWhatsApp('[data-whatsapp="message"]', messageUrl);
+  configureWhatsApp('[data-whatsapp="plain"]', plainUrl);
 })();
 </script>
 </body>

@@ -420,8 +420,35 @@ footer h3{color:#fff;font-size:15px;margin-bottom:12px}
   const plainUrl = isMobile
     ? `https://wa.me/${phone}`
     : `https://web.whatsapp.com/send?phone=${phone}`;
-  document.querySelectorAll('[data-whatsapp="message"]').forEach(a => { a.href = messageUrl; a.target = '_blank'; a.rel = 'noopener'; });
-  document.querySelectorAll('[data-whatsapp="plain"]').forEach(a => { a.href = plainUrl; a.target = '_blank'; a.rel = 'noopener'; });
+
+  let whatsappWindow = null;
+
+  function openWhatsApp(event, url){
+    event.preventDefault();
+    if (isMobile){
+      window.location.href = url;
+      return;
+    }
+    if (whatsappWindow && !whatsappWindow.closed){
+      try { whatsappWindow.location.href = url; } catch (e) {}
+      whatsappWindow.focus();
+    } else {
+      whatsappWindow = window.open(url, 'pluralWhatsApp');
+    }
+  }
+
+  document.querySelectorAll('[data-whatsapp="message"]').forEach(a => {
+    a.href = messageUrl;
+    a.removeAttribute('target');
+    a.removeAttribute('rel');
+    a.addEventListener('click', e => openWhatsApp(e, messageUrl));
+  });
+  document.querySelectorAll('[data-whatsapp="plain"]').forEach(a => {
+    a.href = plainUrl;
+    a.removeAttribute('target');
+    a.removeAttribute('rel');
+    a.addEventListener('click', e => openWhatsApp(e, plainUrl));
+  });
 })();
 </script>
 </body>

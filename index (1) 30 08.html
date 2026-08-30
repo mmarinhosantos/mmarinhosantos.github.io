@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plural Inteligência | Projetos, Educação, Inovação e IA</title>
+<meta name="description" content="Plural Inteligência transforma desafios em projetos viáveis, financiáveis e executáveis, conectando captação, educação, inovação, IA e gestão.">
+<meta property="og:title" content="Plural Inteligência | Projetos, Educação, Inovação e IA">
+<meta property="og:description" content="Transformamos ideias em projetos viáveis, financiáveis e executáveis, conectando estratégia, educação, inovação, tecnologia e gestão.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mmarinhosantos.github.io/">
+<meta property="og:image" content="https://mmarinhosantos.github.io/logo_plural.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://mmarinhosantos.github.io/">
+<style>
+:root{
+  --navy:#082F67;
+  --blue:#0A4F97;
+  --cyan:#12A7BD;
+  --cyan2:#39C2C9;
+  --purple:#9228B3;
+  --green:#0D8E70;
+  --ink:#173250;
+  --muted:#5C7188;
+  --light:#F4F9FD;
+  --line:#D8E6F2;
+  --white:#FFFFFF;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.55;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px, calc(100% - 40px));margin:auto}
+nav{
+  position:sticky;top:0;z-index:20;
+  background:rgba(255,255,255,.96);
+  border-bottom:1px solid rgba(8,47,103,.08);
+  backdrop-filter:blur(10px);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:28px;min-height:88px}
+.nav-logo{height:70px;width:auto;display:block}
+.mobile-cta{display:none;background:var(--navy);color:#fff;padding:10px 14px;border-radius:999px;font-size:12px;font-weight:800;box-shadow:0 7px 18px rgba(8,47,103,.15)}
+.nav-links{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:700;color:var(--navy)}
+.nav-links a:hover{color:var(--cyan)}
+.nav-cta{
+  background:var(--navy);color:#fff!important;padding:11px 18px;border-radius:999px;
+  box-shadow:0 7px 18px rgba(8,47,103,.15)
+}
+.hero{
+  position:relative;overflow:hidden;
+  min-height:610px;
+  display:flex;align-items:center;
+  background:
+    radial-gradient(circle at 84% 15%, rgba(18,167,189,.14), transparent 28%),
+    radial-gradient(circle at 8% 80%, rgba(146,40,179,.09), transparent 30%),
+    linear-gradient(180deg,#fff 0%,#f8fbfe 100%);
+}
+.hero:after{
+  content:"";position:absolute;right:-140px;bottom:-190px;width:520px;height:520px;
+  border:1px solid rgba(18,167,189,.18);border-radius:50%;
+  box-shadow:0 0 0 55px rgba(18,167,189,.025),0 0 0 110px rgba(146,40,179,.018);
+}
+.hero-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:40px;align-items:center;position:relative;z-index:2}
+.hero-logo{width:min(200px,48%);margin-bottom:14px}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.16em;color:var(--cyan);text-transform:uppercase;margin-bottom:12px}
+h1,h2,h3{margin:0;color:var(--navy);line-height:1.08}
+h1{font-size:clamp(38px,4.2vw,50px);letter-spacing:-.035em}
+.hero p{font-size:17px;color:var(--muted);max-width:620px;margin:16px 0 20px}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:15px 22px;font-weight:800;font-size:14px;transition:.2s}
+.btn-primary{background:linear-gradient(90deg,var(--blue),var(--cyan));color:#fff;box-shadow:0 12px 30px rgba(10,79,151,.20)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--line);background:#fff;color:var(--navy)}
+.hero-visual{
+  border-radius:30px;padding:28px;min-height:390px;position:relative;
+  background:linear-gradient(145deg,var(--navy),#0B4588 55%,#103E7B);
+  box-shadow:0 26px 60px rgba(8,47,103,.22);color:white;
+}
+.hero-visual .big{font-size:62px;font-weight:900;opacity:.96;line-height:1}
+.hero-visual h3{color:white;font-size:28px;margin:10px 0}
+.hero-visual p{color:rgba(255,255,255,.82);font-size:16px;margin:0}
+.flow{display:grid;gap:16px;margin-top:32px}
+.flow-item{display:flex;gap:15px;align-items:center;border:1px solid rgba(255,255,255,.14);padding:14px;border-radius:16px;background:rgba(255,255,255,.06)}
+.dot{width:12px;height:12px;border-radius:50%;flex:0 0 12px}
+.d1{background:#45D0D4}.d2{background:#A93BC9}.d3{background:#78D5AE}
+.section{padding:88px 0}
+.section.light{background:var(--light)}
+.section.navy{background:var(--navy);color:#fff}
+.section-head{text-align:center;max-width:820px;margin:0 auto 48px}
+.section-head h2{font-size:clamp(31px,4vw,48px);letter-spacing:-.02em}
+.section-head p{color:var(--muted);font-size:18px;margin:16px auto 0}
+.navy .section-head h2,.navy h2,.navy h3{color:#fff}
+.navy .section-head p{color:rgba(255,255,255,.75)}
+.problem-copy{max-width:940px;margin:auto;text-align:center}
+.problem-copy h2{font-size:clamp(30px,4vw,48px)}
+.problem-copy p{font-size:18px;color:var(--muted)}
+.triple{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:42px}
+.mini-step{padding:28px 24px;border-top:4px solid var(--cyan);background:#fff;border-radius:18px;box-shadow:0 10px 28px rgba(8,47,103,.07)}
+.mini-step:nth-child(2){border-color:var(--purple)}
+.mini-step:nth-child(3){border-color:var(--green)}
+.mini-step h3{font-size:21px;margin-bottom:7px}
+.mini-step p{margin:0;color:var(--muted)}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.service{padding:32px 28px;border-radius:24px;color:white;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 16px 36px rgba(8,47,103,.13)}
+.service h3{color:white;font-size:26px}
+.service p{color:rgba(255,255,255,.88);font-size:16px}
+.service small{font-weight:800;letter-spacing:.05em;text-transform:uppercase;opacity:.9}
+.s1{background:linear-gradient(145deg,#073E80,#0B62B0)}
+.s2{background:linear-gradient(145deg,#0797AE,#20BCC7)}
+.s3{background:linear-gradient(145deg,#7C209F,#A32CC1)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.chip{padding:11px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:800;color:var(--navy);font-size:14px}
+.audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.audience{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 24px;box-shadow:0 8px 22px rgba(8,47,103,.05)}
+.audience strong{display:block;color:var(--navy);font-size:18px;margin-bottom:6px}
+.audience span{color:var(--muted)}
+.method{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;position:relative}
+.method:before{content:"";position:absolute;top:31px;left:8%;right:8%;height:2px;background:linear-gradient(90deg,var(--blue),var(--cyan),var(--purple),var(--blue));z-index:0}
+.method-step{text-align:center;position:relative;z-index:1}
+.num{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:900;font-size:19px;box-shadow:0 10px 20px rgba(8,47,103,.15)}
+.n1{background:var(--navy)}.n2{background:var(--blue)}.n3{background:var(--cyan)}.n4{background:var(--purple)}.n5{background:var(--navy)}
+.method-step h3{font-size:16px;margin-bottom:8px}
+.method-step p{font-size:14px;color:var(--muted);margin:0}
+.timeline{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.case{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;position:relative;overflow:hidden}
+.case:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--cyan)}
+.case:nth-child(3n+2):before{background:var(--purple)}
+.case:nth-child(3n):before{background:var(--blue)}
+.case .year{font-size:12px;font-weight:900;color:var(--cyan);letter-spacing:.1em}
+.case h3{font-size:23px;margin:7px 0 8px}
+.case p{color:var(--muted);margin:0}
+.case .role{display:inline-block;margin-top:14px;font-size:12px;font-weight:800;color:var(--navy);background:#ECF5FB;padding:7px 10px;border-radius:999px}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+.about-panel{background:linear-gradient(145deg,#062C62,#0B4F98);border-radius:28px;padding:40px;color:white;min-height:360px;display:flex;flex-direction:column;justify-content:space-between}
+.about-panel img{width:220px;filter:brightness(0) invert(1);opacity:.96}
+.about-panel .since{font-size:54px;font-weight:900;line-height:1}
+.about-copy h2{font-size:clamp(32px,4vw,48px)}
+.about-copy p{color:var(--muted);font-size:17px}
+.about-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
+.about-pill{border:1px solid var(--line);border-radius:14px;padding:14px;font-weight:700;color:var(--navy);background:#fff}
+.article-intro{max-width:820px;margin:0 auto;text-align:center;background:#fff;border:1px solid var(--line);border-radius:24px;padding:38px;box-shadow:0 10px 28px rgba(8,47,103,.06)}
+.article-intro p{color:var(--muted);font-size:17px;margin:0 0 24px}
+.cta-box{border-radius:30px;padding:54px;background:linear-gradient(100deg,#062D65,#0B5CA5 58%,#109EB4);color:#fff;text-align:center;box-shadow:0 20px 50px rgba(8,47,103,.18)}
+.cta-box h2{color:#fff;font-size:clamp(32px,4vw,48px)}
+.cta-box p{max-width:720px;margin:16px auto 28px;color:rgba(255,255,255,.84);font-size:18px}
+.cta-box .btn{background:#fff;color:var(--navy)}
+footer{background:#041F45;color:#fff;padding:45px 0 28px}
+.footer-grid{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:38px;align-items:start}
+.footer-logo{width:230px;max-width:100%;margin-bottom:12px;filter:brightness(0) invert(1)}
+footer p, footer a{color:rgba(255,255,255,.78);font-size:14px}
+footer h3{color:#fff;font-size:15px;margin-bottom:12px}
+.legal{border-top:1px solid rgba(255,255,255,.12);margin-top:28px;padding-top:20px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.mobile-menu{display:none}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .mobile-cta{display:inline-flex;align-items:center;justify-content:center}
+  .hero{min-height:auto;padding:70px 0}
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .hero-visual{min-height:auto}
+  .triple,.cards3,.audience-grid{grid-template-columns:1fr}
+  .method{grid-template-columns:1fr 1fr;gap:26px}
+  .method:before{display:none}
+  .timeline{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .about-list{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .container{width:min(100% - 28px,1120px)}
+  .section{padding:68px 0}
+  h1{font-size:42px}
+  .hero p{font-size:18px}
+  .method{grid-template-columns:1fr}
+  .nav-inner{min-height:72px;gap:12px}
+  .nav-logo{height:54px}
+  .mobile-cta{font-size:11px;padding:9px 12px}
+}
+
+/* Conteúdos em destaque */
+.series-head{
+  display:flex;justify-content:space-between;gap:24px;align-items:end;flex-wrap:wrap;
+  margin-bottom:26px
+}
+.series-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 14px;border-radius:999px;
+  background:rgba(18,167,189,.10);color:var(--cyan);
+  font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase
+}
+.series-subtitle{max-width:720px}
+.content-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:22px
+}
+.content-card{
+  background:#fff;border:1px solid var(--line);border-radius:24px;
+  padding:28px;box-shadow:0 12px 24px rgba(8,47,103,.05)
+}
+.content-card .mini{
+  display:inline-flex;padding:7px 12px;border-radius:999px;
+  font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+  margin-bottom:16px
+}
+.content-card .mini.article{background:rgba(146,40,179,.10);color:var(--purple)}
+.content-card .mini.video{background:rgba(13,142,112,.10);color:var(--green)}
+.content-card h3{
+  margin:0 0 10px;color:var(--navy);font-size:24px;line-height:1.2
+}
+.content-card p{
+  margin:0 0 18px;color:var(--muted)
+}
+.content-card .btn{margin-top:auto}
+.article-card{
+  min-height:290px;display:flex;flex-direction:column;justify-content:space-between
+}
+.series-kicker{
+  color:var(--navy);font-size:13px;font-weight:800;letter-spacing:.06em;
+  text-transform:uppercase;margin-bottom:10px
+}
+.video-card{
+  display:grid;grid-template-columns:210px 1fr;gap:18px;align-items:center
+}
+.video-frame{
+  background:#071F45;border-radius:18px;padding:12px;display:flex;
+  align-items:center;justify-content:center
+}
+.video-frame video{
+  width:100%;max-height:340px;border-radius:14px;background:#000
+}
+.video-copy{display:flex;flex-direction:column}
+.content-note{
+  margin-top:20px;color:var(--muted);font-size:14px
+}
+@media (max-width:900px){
+  .content-grid{grid-template-columns:1fr}
+  .video-card{grid-template-columns:1fr}
+  .video-frame video{max-height:540px;width:auto;max-width:100%}
+}
+
+</style>
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a href="#inicio"><img src="logo_plural.png" class="nav-logo" alt="Plural Inteligência"></a>
+    <a class="mobile-cta"  href="https://wa.me/message/RKMMH5FBGR34D1" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+    <div class="nav-links">
+      <a href="#solucoes">Soluções</a>
+      <a href="#publicos">Para quem</a>
+      <a href="#metodo">Método</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#sobre">Sobre</a>
+      <a class="nav-cta"  href="https://wa.me/message/RKMMH5FBGR34D1" target="_blank" rel="noopener noreferrer">Falar com a Plural</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div>
+      <img src="logo_plural.png" class="hero-logo" alt="Plural Inteligência">
+      <div class="eyebrow">Projetos • Educação • Inovação • Inteligência Artificial</div>
+      <h1>Transformamos ideias em projetos viáveis, financiáveis e executáveis.</h1>
+      <p>Ajudamos organizações a transformar desafios em projetos, recursos e impacto — conectando estratégia, educação, inovação, tecnologia e gestão.</p>
+      <div class="actions">
+        <a class="btn btn-primary"  href="https://wa.me/message/RKMMH5FBGR34D1" target="_blank" rel="noopener noreferrer">QUERO TIRAR MEU PROJETO DO PAPEL</a>
+        <a class="btn btn-ghost" href="#projetos">Conhecer experiências</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="big">Plural.</div>
+      <h3>Inteligência para sair do papel.</h3>
+      <p>Da leitura do desafio à estruturação, viabilização, execução e mensuração de resultados.</p>
+      <div class="flow">
+        <div class="flow-item"><span class="dot d1"></span><strong>Projetos e captação</strong></div>
+        <div class="flow-item"><span class="dot d2"></span><strong>Educação e inovação</strong></div>
+        <div class="flow-item"><span class="dot d3"></span><strong>IA, processos e estratégia</strong></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container problem-copy">
+    <h2>Boas ideias não podem morrer por falta de projeto, estratégia ou recurso.</h2>
+    <p>Muitas organizações sabem o que querem transformar, mas encontram dificuldades para estruturar projetos, captar recursos, organizar a execução e transformar boas intenções em resultados.</p>
+    <p>A Plural conecta estratégia, educação, inovação, tecnologia e gestão para transformar desafios em projetos concretos e executáveis.</p>
+    <div class="triple">
+      <div class="mini-step"><h3>ESTRUTURAR</h3><p>Transformar ideias em projetos.</p></div>
+      <div class="mini-step"><h3>VIABILIZAR</h3><p>Encontrar caminhos, recursos e parceiros.</p></div>
+      <div class="mini-step"><h3>EXECUTAR</h3><p>Transformar planejamento em resultado.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section light" id="solucoes">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Soluções</div>
+      <h2>Soluções para transformar desafios em projetos que saem do papel.</h2>
+      <p>Estratégia, projeto e execução conectados para transformar boas ideias em resultados concretos.</p>
+    </div>
+    <div class="cards3">
+      <div class="service s1"><div><small>01</small><h3>Projetos & Captação</h3><p>Da ideia ao financiamento. Projetos, editais, MROSC, leis de incentivo, orçamento, indicadores e estratégias de captação.</p></div></div>
+      <div class="service s2"><div><small>02</small><h3>Educação & Inovação</h3><p>Educação conectada ao presente. IA aplicada à educação, BNCC, formação, Projeto de Vida, diversidade e metodologias inovadoras.</p></div></div>
+      <div class="service s3"><div><small>03</small><h3>IA & Estratégia</h3><p>Mais inteligência, menos operação. Automação, curadoria, conteúdo estratégico, inteligência de processos e aplicação prática de IA.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Competências e sistemas</div>
+      <h2>Da oportunidade à operação.</h2>
+      <p>Conhecimento aplicado aos principais ambientes de projetos, parcerias, captação e execução.</p>
+    </div>
+    <div class="chips">
+      <span class="chip">Transferegov.br</span><span class="chip">MROSC / Lei 13.019</span><span class="chip">Leis de Incentivo</span>
+      <span class="chip">CONVERJ</span><span class="chip">Emendas Parlamentares</span><span class="chip">Chamamentos Públicos</span>
+      <span class="chip">Planos de Trabalho</span><span class="chip">Orçamento e Indicadores</span><span class="chip">Prestação de Contas</span><span class="chip">Captação e Parcerias</span>
+    </div>
+  </div>
+</section>
+
+<section class="section light" id="publicos">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Para quem trabalhamos</div>
+      <h2>Para organizações e profissionais que precisam transformar desafios em projetos, inovação e impacto.</h2>
+    </div>
+    <div class="audience-grid">
+      <div class="audience"><strong>OSCs, Institutos e Fundações</strong><span>Projetos, captação e impacto social.</span></div>
+      <div class="audience"><strong>Escolas e Redes de Ensino</strong><span>Educação, inovação e formação.</span></div>
+      <div class="audience"><strong>Empresas</strong><span>Projetos de impacto, inovação e ESG.</span></div>
+      <div class="audience"><strong>Governos e Órgãos Públicos</strong><span>Políticas, projetos e soluções para territórios.</span></div>
+      <div class="audience"><strong>Projetos Comunitários e Empreendedores de Impacto</strong><span>Da boa ideia à estruturação.</span></div>
+      <div class="audience"><strong>Profissionais e Consultores</strong><span>Estratégia, posicionamento e soluções para transformar conhecimento em oportunidade.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="metodo">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Método Plural</div>
+      <h2>Como transformamos desafios em projetos</h2>
+      <p>Da escuta ao resultado, organizamos cada etapa para transformar problemas complexos em soluções executáveis.</p>
+    </div>
+    <div class="method">
+      <div class="method-step"><div class="num n1">01</div><h3>ESCUTAR</h3><p>Entender o problema, o contexto e o resultado esperado.</p></div>
+      <div class="method-step"><div class="num n2">02</div><h3>ESTRUTURAR</h3><p>Transformar necessidades em projeto, estratégia e plano de ação.</p></div>
+      <div class="method-step"><div class="num n3">03</div><h3>VIABILIZAR</h3><p>Identificar recursos, parceiros, tecnologias e oportunidades.</p></div>
+      <div class="method-step"><div class="num n4">04</div><h3>IMPLEMENTAR</h3><p>Organizar responsabilidades, execução e entregas.</p></div>
+      <div class="method-step"><div class="num n5">05</div><h3>MEDIR</h3><p>Acompanhar resultados, indicadores e evidências de impacto.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section light" id="projetos">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Inteligência construída na prática</div>
+      <h2>Projetos e experiências que formam o repertório da Plural</h2>
+      <p>Uma trajetória de elaboração, coordenação, planejamento e inovação aplicada a organizações, territórios e políticas públicas.</p>
+    </div>
+    <div class="timeline">
+      <article class="case"><div class="year">2010</div><h3>ADRENNERJ</h3><p>Gerenciamento de projetos, planos de trabalho, convênios, captação e estruturação de núcleo de convênios e contratos.</p><span class="role">Atuação direta de Marco Antonio</span></article>
+      <article class="case"><div class="year">2010–2012</div><h3>Porto do Açu / São João da Barra</h3><p>Agenda de desenvolvimento territorial, integração de atores, conhecimento, projetos e governança territorial.</p><span class="role">Coordenação e desenvolvimento territorial</span></article>
+      <article class="case"><div class="year">2013–2014</div><h3>Macaé — Planejamento e Gestão em Saúde</h3><p>Rede oncológica, planos de trabalho, POAs, termos de referência, educação permanente e captação de recursos.</p><span class="role">Assessoria de planejamento e gestão</span></article>
+      <article class="case"><div class="year">2018–2019</div><h3>VIVA Pro — Viva Rio</h3><p>Criação e coordenação pedagógica de iniciativa de mobilização comunitária, formação, metodologia e indicadores.</p><span class="role">Criação e coordenação pedagógica</span></article>
+      <article class="case"><div class="year">2026</div><h3>O Apito e o Sagrado</h3><p>Projeto cultural de memória, ancestralidade e território, com pesquisa, fundamentação e construção técnico-artística.</p><span class="role">Projeto autoral / agente cultural</span></article>
+      <article class="case"><div class="year">2026</div><h3>Autolabor</h3><p>Estruturação de estratégia de captação, qualificação de parceiros e investidores e organização da abordagem comercial.</p><span class="role">Plural Inteligência</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="sobre">
+  <div class="container about-grid">
+    <div class="about-panel">
+      <img src="logo_plural.png" alt="Plural Inteligência">
+      <div><div class="since">2019</div><p>Plural Inteligência — experiência acumulada transformada em método, projeto e entrega.</p></div>
+    </div>
+    <div class="about-copy">
+      <div class="eyebrow">Sobre a Plural</div>
+      <h2>Experiência de campo, pensamento de projeto e inteligência aplicada.</h2>
+      <p>A Plural Inteligência reúne a trajetória profissional de Marco Antonio Marinho dos Santos em educação, gestão pública, projetos, desenvolvimento territorial, cultura, inovação e impacto social.</p>
+      <p>O trabalho parte de um princípio simples: compreender o contexto antes de propor a solução. Por isso, combinamos escuta, pesquisa, método, planejamento, tecnologia e capacidade de execução.</p>
+      <div class="about-list">
+        <div class="about-pill">Gestão e elaboração de projetos</div><div class="about-pill">Educação e tecnologia educacional</div>
+        <div class="about-pill">Captação e parcerias</div><div class="about-pill">Diversidade, cultura e territórios</div>
+        <div class="about-pill">Inteligência Artificial aplicada</div><div class="about-pill">Gestão pública e terceiro setor</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section light" id="artigos">
+  <div class="container">
+    <div class="series-head">
+      <div class="series-subtitle">
+        <div class="eyebrow">Leitura e Vídeo Plural</div>
+        <h2>Conteúdos em destaque</h2>
+        <p>Produção autoral da Plural Inteligência sobre projetos, políticas públicas, inovação, educação, estratégia e inteligência aplicada.</p>
+      </div>
+      <div class="series-badge">Série autoral · Projetos que o tempo não venceu</div>
+    </div>
+
+    <div class="content-grid">
+      <article class="content-card article-card">
+        <div>
+          <div class="mini article">Artigo · LinkedIn</div>
+          <div class="series-kicker">Projetos que o tempo não venceu #01</div>
+          <h3>Quando formar profissionais não basta: é preciso transformar o trabalho em saúde</h3>
+          <p>Uma reflexão sobre um projeto de educação permanente em saúde concebido em 2011 e sobre como sua arquitetura — território, gestão, formação e resultado — continua atual diante dos desafios do SUS e das novas possibilidades de inteligência e tecnologia.</p>
+        </div>
+        <a class="btn btn-primary" href="https://www.linkedin.com/pulse/projetos-que-o-tempo-n%C3%A3o-venceu-01-marco-antonio-marinho-dos-santos-bvraf?utm_source=share&utm_medium=member_ios&utm_campaign=share_via" target="_blank" rel="noopener noreferrer">Ler artigo no LinkedIn</a>
+      </article>
+
+      <article class="content-card article-card">
+        <div>
+          <div class="mini article">Artigo · LinkedIn</div>
+          <div class="series-kicker">Projetos que o tempo não venceu #02</div>
+          <h3>Humaniza Rio: a ideia que ficou entre o projeto e a política pública</h3>
+          <p>Uma reflexão sobre o Humaniza Rio, projeto concebido em 2021 para aproximar governo, universidade e território. Cinco anos depois, conceitos como gestão microterritorial, participação social, dados territoriais e inteligência analítica ganham novas possibilidades com a inteligência artificial.</p>
+        </div>
+        <a class="btn btn-primary" href="https://www.linkedin.com/pulse/projetos-que-o-tempo-n%C3%A3o-venceu-02-marco-antonio-marinho-dos-santos-1cdmf?utm_source=share&utm_medium=member_ios&utm_campaign=share_via" target="_blank" rel="noopener noreferrer">Ler artigo no LinkedIn</a>
+      </article>
+
+      <article class="content-card video-card">
+        <div class="video-frame">
+          <video controls playsinline preload="metadata" poster="poster_01.jpg">
+            <source src="video_plural_01.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-copy">
+          <div class="mini video">Vídeo</div>
+          <h3>Cultura e Fé</h3>
+          <p>Chamada da Secretaria de Estado de Cultura e Economia Criativa do Rio de Janeiro.</p>
+        </div>
+      </article>
+
+      <article class="content-card video-card">
+        <div class="video-frame">
+          <video controls playsinline preload="metadata" poster="poster_02.jpg">
+            <source src="video_plural_02.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-copy">
+          <div class="mini video">Vídeo</div>
+          <h3>Rouanet nas Favelas</h3>
+          <p>Apresentação da iniciativa Rouanet nas Favelas.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="content-note">Resgatar. Reconhecer. Reinventar. Gerar impacto.</div>
+  </div>
+</section>
+
+
+<section class="section" id="contato">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Tem um projeto, uma ideia ou um desafio que precisa sair do papel?</h2>
+      <p>Conte o que você precisa transformar. A Plural ajuda a organizar o problema, estruturar o projeto e encontrar o caminho para viabilizá-lo.</p>
+      <a class="btn"  href="https://wa.me/message/RKMMH5FBGR34D1" target="_blank" rel="noopener noreferrer">FALAR COM A PLURAL NO WHATSAPP</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="logo_plural.png" class="footer-logo" alt="Plural Inteligência">
+        <p>Educação • Inovação • IA • Projetos • Impacto</p>
+      </div>
+      <div>
+        <h3>CONTATO</h3>
+        <p><a href="mailto:plural.mams@gmail.com">plural.mams@gmail.com</a><br>
+        <a href="tel:+5521966586042">21 96658-6042</a><br>
+        <a  href="https://wa.me/message/RKMMH5FBGR34D1" target="_blank" rel="noopener noreferrer">WhatsApp Business: 21 96658-6042</a></p>
+      </div>
+      <div>
+        <h3>REDES, SITE E ENDEREÇO</h3>
+        <p><a href="https://www.linkedin.com/in/mmarinhosantos/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://www.instagram.com/plural.inteligencia/" target="_blank" rel="noopener noreferrer">Instagram</a><br>
+        <a href="https://mmarinhosantos.github.io/">mmarinhosantos.github.io</a><br>
+        Estr. Adhemar Bebiano, 3546/23<br>Inhaúma · Rio de Janeiro · RJ<br>CEP 20766-720</p>
+      </div>
+    </div>
+    <div class="legal">
+      <p>© 2026 Plural Inteligência. Todos os direitos reservados.</p>
+      <p>Portfólio selecionado. Instituições citadas preservam a titularidade de suas respectivas iniciativas.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

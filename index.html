@@ -180,6 +180,67 @@ footer h3{color:#fff;font-size:15px;margin-bottom:12px}
   .nav-logo{height:54px}
   .mobile-cta{font-size:11px;padding:9px 12px}
 }
+
+/* Conteúdos em destaque */
+.series-head{
+  display:flex;justify-content:space-between;gap:24px;align-items:end;flex-wrap:wrap;
+  margin-bottom:26px
+}
+.series-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 14px;border-radius:999px;
+  background:rgba(18,167,189,.10);color:var(--cyan);
+  font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase
+}
+.series-subtitle{max-width:720px}
+.content-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:22px
+}
+.content-card{
+  background:#fff;border:1px solid var(--line);border-radius:24px;
+  padding:28px;box-shadow:0 12px 24px rgba(8,47,103,.05)
+}
+.content-card .mini{
+  display:inline-flex;padding:7px 12px;border-radius:999px;
+  font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+  margin-bottom:16px
+}
+.content-card .mini.article{background:rgba(146,40,179,.10);color:var(--purple)}
+.content-card .mini.video{background:rgba(13,142,112,.10);color:var(--green)}
+.content-card h3{
+  margin:0 0 10px;color:var(--navy);font-size:24px;line-height:1.2
+}
+.content-card p{
+  margin:0 0 18px;color:var(--muted)
+}
+.content-card .btn{margin-top:auto}
+.article-card{
+  min-height:290px;display:flex;flex-direction:column;justify-content:space-between
+}
+.series-kicker{
+  color:var(--navy);font-size:13px;font-weight:800;letter-spacing:.06em;
+  text-transform:uppercase;margin-bottom:10px
+}
+.video-card{
+  display:grid;grid-template-columns:210px 1fr;gap:18px;align-items:center
+}
+.video-frame{
+  background:#071F45;border-radius:18px;padding:12px;display:flex;
+  align-items:center;justify-content:center
+}
+.video-frame video{
+  width:100%;max-height:340px;border-radius:14px;background:#000
+}
+.video-copy{display:flex;flex-direction:column}
+.content-note{
+  margin-top:20px;color:var(--muted);font-size:14px
+}
+@media (max-width:900px){
+  .content-grid{grid-template-columns:1fr}
+  .video-card{grid-template-columns:1fr}
+  .video-frame video{max-height:540px;width:auto;max-width:100%}
+}
+
 </style>
 </head>
 <body>
@@ -338,19 +399,70 @@ footer h3{color:#fff;font-size:15px;margin-bottom:12px}
   </div>
 </section>
 
+
 <section class="section light" id="artigos">
   <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">Artigos e inteligência</div>
-      <h2>Ideias para compreender o presente e construir soluções melhores.</h2>
-      <p>Educação, diversidade, inovação, inteligência artificial, territórios, gestão e políticas públicas.</p>
+    <div class="series-head">
+      <div class="series-subtitle">
+        <div class="eyebrow">Leitura e Vídeo Plural</div>
+        <h2>Conteúdos em destaque</h2>
+        <p>Produção autoral da Plural Inteligência sobre projetos, políticas públicas, inovação, educação, estratégia e inteligência aplicada.</p>
+      </div>
+      <div class="series-badge">Série autoral · Projetos que o tempo não venceu</div>
     </div>
-    <div class="article-intro">
-      <p>A produção de conteúdo da Plural reúne reflexão e experiência prática sobre os desafios que atravessam organizações, escolas, territórios e projetos de impacto.</p>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/mmarinhosantos/" target="_blank" rel="noopener noreferrer">Ver artigos e publicações no LinkedIn</a>
+
+    <div class="content-grid">
+      <article class="content-card article-card">
+        <div>
+          <div class="mini article">Artigo · LinkedIn</div>
+          <div class="series-kicker">Projetos que o tempo não venceu #01</div>
+          <h3>Quando formar profissionais não basta: é preciso transformar o trabalho em saúde</h3>
+          <p>Uma reflexão sobre um projeto de educação permanente em saúde concebido em 2011 e sobre como sua arquitetura — território, gestão, formação e resultado — continua atual diante dos desafios do SUS e das novas possibilidades de inteligência e tecnologia.</p>
+        </div>
+        <a class="btn btn-primary" href="https://www.linkedin.com/pulse/projetos-que-o-tempo-n%C3%A3o-venceu-01-marco-antonio-marinho-dos-santos-bvraf?utm_source=share&utm_medium=member_ios&utm_campaign=share_via" target="_blank" rel="noopener noreferrer">Ler artigo no LinkedIn</a>
+      </article>
+
+      <article class="content-card article-card">
+        <div>
+          <div class="mini article">Artigo · LinkedIn</div>
+          <div class="series-kicker">Projetos que o tempo não venceu #02</div>
+          <h3>Humaniza Rio: a ideia que ficou entre o projeto e a política pública</h3>
+          <p>Uma reflexão sobre o Humaniza Rio, projeto concebido em 2021 para aproximar governo, universidade e território. Cinco anos depois, conceitos como gestão microterritorial, participação social, dados territoriais e inteligência analítica ganham novas possibilidades com a inteligência artificial.</p>
+        </div>
+        <a class="btn btn-primary" href="https://www.linkedin.com/pulse/projetos-que-o-tempo-n%C3%A3o-venceu-02-marco-antonio-marinho-dos-santos-1cdmf?utm_source=share&utm_medium=member_ios&utm_campaign=share_via" target="_blank" rel="noopener noreferrer">Ler artigo no LinkedIn</a>
+      </article>
+
+      <article class="content-card video-card">
+        <div class="video-frame">
+          <video controls playsinline preload="metadata" poster="poster_01.jpg">
+            <source src="video_plural_01.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-copy">
+          <div class="mini video">Vídeo Plural</div>
+          <h3>Vídeo institucional curto</h3>
+          <p>Apresentação breve da Plural Inteligência para uso no próprio site, sem retirar o visitante da página.</p>
+        </div>
+      </article>
+
+      <article class="content-card video-card">
+        <div class="video-frame">
+          <video controls playsinline preload="metadata" poster="poster_02.jpg">
+            <source src="video_plural_02.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-copy">
+          <div class="mini video">Vídeo Plural</div>
+          <h3>Vídeo Plural com QR Code</h3>
+          <p>Conteúdo em vídeo para reforçar marca, presença digital e caminhos de contato da Plural Inteligência.</p>
+        </div>
+      </article>
     </div>
+
+    <div class="content-note">Resgatar. Reconhecer. Reinventar. Gerar impacto.</div>
   </div>
 </section>
+
 
 <section class="section" id="contato">
   <div class="container">
